@@ -9,7 +9,7 @@ public class Main {
 
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
-		double sum = 0.0, avg;
+		double sum = 0.0;
 
 		System.out.print("How many number will be entered? ");
 		int quantity = sc.nextInt();
