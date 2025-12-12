@@ -16,7 +16,7 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		
 		List<Person> list = new ArrayList<Person>();
-		System.out.print("How many people you will registered? ");
+		System.out.print("How many people will you register? ");
 		int quantity = sc.nextInt();
 		
 		for(int i = 0; i < quantity; i++) {
@@ -30,7 +30,7 @@ public class Main {
 			list.add(new Person(name, age));
 		}
 		
-		Optional<Person> old =  list.stream().max(Comparator.comparingInt(p -> p.getAge()));
+		Optional<Person> old =  list.stream().max(Comparator.comparingInt(Person::getAge));
 		
 		System.out.println("OLDER PERSON: " + old.get().getName());
 		
